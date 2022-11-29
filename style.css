@@ -36,3 +36,159 @@ a.see_all{border-color:#81d742;}
 header.main .loading{color:#fff!important;}
 .starstruck .star-on-png:before{color:#81d742;}
 .dooplay_player{border-bottom:none;}
+
+
+header{
+    background: rgba(0, 0, 0, 1);
+        background: url(https://i.stack.imgur.com/NEuip.jpg);
+    border-radius: 3px;
+    border-bottom: 5px solid #bc2727;
+    }
+    
+    #dt_contenedor {
+        background: url();
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+    
+    .head-main-nav ul.main-header li ul.sub-menu li {
+        width: calc(100%/2);
+    }
+    
+    .head-main-nav ul.main-header li ul.sub-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        max-width: 500px;
+        padding-left: 0;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .img-site{
+        width: 100%;
+        margin-bottom: -3px;
+    }
+    
+    .content.full_width_layout 
+    
+                .dtsingle .content {
+        width:calc(100% - 0px);
+    }
+    
+    .module .content {
+        width: calc(100% - 0px);
+        margin-right: 0px;
+        padding: 20px;
+        float: left;
+        border-right: solid 0px;
+    }
+    
+    .module .content .items .item .poster {
+        border-radius: 10px 10px 10px 10px;
+    }
+    
+    .module .content .items .item {
+        padding: 2px;   
+    }
+    
+    #contenedor {
+        margin: 73px auto 0;
+    }
+    
+    a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+        border-radius: 8px 8px 8px 8px;
+    }
+    
+    header.main {
+        border-radius: 0px 0px 0px 0px;
+    }
+    
+    .module .content header h2 {
+        border-left: solid 3px #fff;
+    }
+    
+    .module .content header h1, .module .content header h2 {
+        border-left: solid 0px #408bea;
+          padding-left: 0px;
+    }
+    
+    .module .content .items .item .dfeatur .mark i {
+        color: #222d3444;
+    }
+    
+    .module .content header h2 {
+        font-size: 20px;
+        font-weight: 900;
+        padding-left: 0px;
+    }
+    
+    .module .content header h1, .module .content header h2 {
+        font-size: 20px;
+        font-weight: 900;
+        padding-left: 0px;
+    }
+    
+    .module .content .items .item .data {
+        text-align: center;
+    }
+    
+    .module .content .items .item .dfeatur {
+        padding-left: 0px;
+    }
+    
+    .dtsingle .sidebar {
+        width: 0px;
+          padding: 0px;
+    }
+    
+    .module .sidebar {
+        width: 0px;
+          padding: 0px;
+    }
+    
+    .dooplay_player {
+        border-bottom: solid 0px #f5f7fa;
+    }
+    
+    .module .content .featured .item {
+        width: calc(100%/6);
+    }
+    
+    footer.main .fbox {
+        margin-top: 10px;
+    }
+    
+    .full_width_layout {
+        padding: 10px 20px!important;
+    }
+    
+    .srelacionados article {
+        padding: 2px;
+    }
+    
+    .module .content .items {
+        margin-bottom: 5px;
+    }
+     #contenedor {
+        max-width: 1300px;
+        margin: 60px auto 0;
+    }
+    footer.main .fbox {
+        max-width: 1300px;
+        margin: 0 auto;
+        font-size: 13px;
+    }
+    
+    .head-main-nav ul.main-header li a {
+        color: #ffffff;
+    }
+    a img.alignnone {
+        margin: 10px 10px 10px 10px;
+    }
+    .module .content header h1, .module .content header h2 {
+        color: #58FA58;
+    
+    
+    
