@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Warezcdn - Filme</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;800&display=swap" rel="stylesheet"> 
+<link rel=stylesheet type="text/css" href="/style.css?v155522" />
+<base href="https://embed.warezcdn.net">
+
+<script>
+	// styling variables
+	const urlhash = location.hash.split("#");
+	urlhash.forEach(element => {
+		
+		if (element == "nobackground") {
+			document.getElementsByTagName('head')[0].innerHTML += '<style>#serieSelector{padding-left:30px;}@media only screen and (max-width:480px){ #serieSelector{padding-left:0px!important;}#selectPlayer{top:15vh;} }body{background: transparent;}#main{background: transparent;}#background{display: none!important;}</style>';	
+		}
+
+		if (element.includes("color")) {
+			var color = element.replace("color:","#");
+			document.getElementsByTagName('head')[0].innerHTML += '<style>#seasons .item.active{background: '+color+'!important;}#seasons .item:hover:not(.select){background: '+color+'!important;opacity: 0.8!important;}#episodes .item:hover::before{background: '+color+'!important;opacity: 0.3!important;}#episodes .item.active::before{border-color: '+color+'!important;}#selectPlayer .selectAudioButton.active{background: '+color+'!important;}</style>';	
+		}
+	});
+
+</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-72373820-12', 'auto');
+	ga('send', 'pageview');
+</script></head>
+<body>
+
+	<div id="main">
+
+		<div id="background" style="background-image: url('https://warezcdn.com/content/movies/background/1280/21695.jpg');"></div>
+		<div id="showMainButton">
+			Mostrar opções
+		</div>
+
+		<div id="selectPlayer">
+			
+							<div class="selectAudio">
+											Apenas disponível em <b>Legendado</b><br>
+						<b style="margin-top: 5px;display:block;">Escolha um Player</b>
+									</div>
+				<div class="buttonList">
+									</div>
+				<div class="hostListSelector single">
+											<div class="hostList active" data-audio-id="3925">
+							<div class="buttonLoadHost warezcdn" data-load-embed="3925" data-load-embed-host="warezcdn"><i></i><div class="t">WarezCDN</div><div class="s">O melhor e mais rápido!</div></div><div class="buttonLoadHost mixdrop" data-load-embed="3925" data-load-embed-host="mixdrop"><i></i><div class="t">Mixdrop</div><div class="s">Recomendado, rápido e pouco anúncio</div></div><div class="buttonLoadHost streamtape" data-load-embed="3925" data-load-embed-host="streamtape"><i></i><div class="t">Streamtape</div><div class="s">Indicado para internet lenta, pouco anúncio</div></div>						</div>
+										</div>
+					</div>
+	</div>
+
+	<div id="embed">
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		
+		isTransparent();
+		function isTransparent(){
+			var hash = window.location.hash;
+			if (hash == "#transparent") {
+				$("#background").remove();
+				$("#main, body").css("background", "transparent");
+			}
+		}
+
+		function getIframe(url){
+			return '<iframe src="'+url+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
+		}
+
+		$(document).on("click", "[data-load-hosts]", function(){
+			var which = $(this).attr("data-load-hosts");
+			$(".buttonList .selectAudioButton").removeClass("active");
+			$(this).addClass("active");
+			$(".hostListSelector .hostList").removeClass("active");
+			$('[data-audio-id="'+which+'"]').addClass("active");
+		});
+
+		$(document).on("click", "[data-load-embed]", function(){
+			var id =$(this).attr("data-load-embed");
+			var sv = $(this).attr("data-load-embed-host");
+
+			$("[data-load-embed]").removeClass("active");
+			$(this).addClass("active");
+
+			var url = "https://warezcdn.com/embed/getEmbed.php?id="+id+"&sv="+sv;
+			$("#embed").html(getIframe(url));
+			$("#embed").addClass("active");
+			$("#main").addClass("hidden");
+		});
+
+		$(document).on("click", "#showMainButton", function(){
+			var $menu = $("#main");
+			var $embed = $("#embed");
+			if ($menu.hasClass("hidden")) {
+				$menu.removeClass("hidden");
+				$embed.removeClass("active");
+			}else{
+				$menu.addClass("hidden");
+				$embed.addClass("active");
+			}
+		});
+
+	</script>
+</body>
+</html>
+
