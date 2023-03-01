@@ -257,23 +257,21 @@
 <article id="post-featured-102906" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fXhL95BYYfy9uSld68RHsmRfcqU.jpg" alt="O Culpado"><div class="rating">5.6</div><div class="featu">Thriller</div><a href="https://jp-app.netlify.app/details/55101"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/55101">O Culpado</a></h3><span>2000</span></div></article>
 
 
-<article id="post-featured-17577" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/aIpVfGq2dBI2XTamMdnZbP8QFBw.jpg" alt="O Alvo: Bem-Vindo ao Inferno"><div class="rating">4.5</div><div class="featu">Thriller</div><a href="https://jp-app.netlify.app/details/17577"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/17577">O Alvo: Bem-Vindo ao Inferno</a></h3><span>2009</span></div></article>
-
-
-<article id="post-featured-505579" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xvNJfzSHv3zpmBH0Uu8pZTW3f9x.jpg" alt="Agentes Duplos"><div class="rating">5.4</div><div class="featu">Thriller</div><a href="https://jp-app.netlify.app/details/505579"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/505579">Agentes Duplos</a></h3><span>2018</span></div></article>
-
-<article id="post-featured-25602" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tKjH1IQVeUmHOlxZinQdjFHkFVG.jpg" alt="Ninja"><div class="rating">6.0</div><div class="featu">Thriller</div><a href="https://jp-app.netlify.app/details/25602"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/25602">Ninja</a></h3><span>2009</span></div></article>
-
-<article id="post-featured-653024" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/p1dXPdz5C1tPpPIy3kth3rTCOQe.jpg" alt="O Comitê da Vida"><div class="rating">7.0</div><div class="featu">Thriller</div><a href="https://jp-app.netlify.app/details/653024"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/653024">O Comitê da Vida</a></h3><span>2021</span></div></article>
-
-<article id="post-featured-8922" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/4deKiUXWqyATIEKCBSjRxCOLvu0.jpg" alt="Olhos Famintos"><div class="rating">6.4</div><div class="featu">Thriller</div><a href="https://jp-app.netlify.app/details/8922"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/8922">Olhos Famintos</a></h3><span>2011</span></div></article>
 
 </div>
 
 
+	
+
+<div class="pagination"><span>Page 1 of 37</span><span class="current">1</span><a href='https://jppfilmes.pages.dev/generos/thriller/page/2/' class="inactive">2</a><a href='https://jppfilmes.pages.dev/generos/thriller/page/3/' class="inactive">3</a><a class='arrow_pag' href="https://jppfilmes.pages.dev/generos/thriller/page/2/"><i id='nextpagination' class='fas fa-caret-right'></i></a></div>
+<div class='resppages'><a href="https://jppfilmes.pages.dev/generos/thriller/page/2/" ><span class="fas fa-chevron-right"></span></a></div>	</div>
+	
 
 
 
+<div class="sidebar right scrolling">
+	
+</div>
 
 <center>
 	<form action="https://www.paypal.com/donate/?hosted_button_id=YVQ4JYWWPJVNS" method="post" target="_blank" style="text-align: center;">
@@ -282,7 +280,7 @@
 			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
 			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 		  </form></center>
-</div></div>
+</div>
 
 
 </div>
@@ -318,6 +316,29 @@
 <script type='text/javascript' src='https://jppfilmes.pages.dev/themes/dooplay/assets/js/front.livesearch.min.js' id='live_search-js'></script>
 
    </div>
-
+   <script type="text/javascript">
+	jQuery(document).ready(function($) {
+	$("#dt-episodes").owlCarousel({ autoPlay:false,pagination:false,items:5,stopOnHover:true,itemsDesktop:[900,3],itemsDesktopSmall:[750,3],itemsTablet:[500,2],itemsMobile:[320,1] });
+	$(".next").click(function(){ $("#dt-episodes").trigger("owl.next") });
+	$(".prev").click(function(){ $("#dt-episodes").trigger("owl.prev") });
+	$("#dt-seasons").owlCarousel({ autoPlay:false,items:7,stopOnHover:true,pagination:false,itemsDesktop:[1199,5],itemsDesktopSmall:[980,5],itemsTablet:[768,4],itemsTabletSmall:false,itemsMobile:[479,3] });
+	$(".next2").click(function(){ $("#dt-seasons").trigger("owl.next") });
+	$(".prev2").click(function(){ $("#dt-seasons").trigger("owl.prev") });
+	$("#slider-movies").owlCarousel({ autoPlay:false,items:3,stopOnHover:true,pagination:true,itemsDesktop:[1199,2],itemsDesktopSmall:[980,2],itemsTablet:[768,2],itemsTabletSmall:[600,1],itemsMobile:[479,1] });
+	$("#slider-tvshows").owlCarousel({ autoPlay:false,items:3,stopOnHover:true,pagination:true,itemsDesktop:[1199,2],itemsDesktopSmall:[980,2],itemsTablet:[768,2],itemsTabletSmall:[600,1],itemsMobile:[479,1] });
+	$("#slider-movies-tvshows").owlCarousel({ autoPlay:false,items:3,stopOnHover:true,pagination:true,itemsDesktop:[1199,2],itemsDesktopSmall:[980,2],itemsTablet:[768,2],itemsTabletSmall:[600,1],itemsMobile:[479,1] });
+	$(".reset").click(function(event){ if (!confirm( dtGonza.reset_all )) { event.preventDefault() } });
+	$(".addcontent").click(function(event){ if(!confirm(dtGonza.manually_content)){ event.preventDefault() } });});
+	</script>
+   <script type='text/javascript' src='/wp-content/themes/dooplay/assets/js/front.scripts.min.js'scripts-js></script>
+   <script type='text/javascript' src='/wp-content/themes/dooplay/assets/js/front.livesearch.min.js' id='live_search-js'></script>
+   <div style="display:none !important">
+	<script type='text/javascript' id='live_search-js-extra'>
+		/* <![CDATA[ */
+		var dtGonza = {"api":"https:\/\/jppfilmes.pages.dev\/wp-json\/dooplay\/search\/","glossary":"https:\/\/jppfilmes.pages.dev\/wp-json\/dooplay\/glossary\/","nonce":"4f779f83d9","area":".live-search","button":".search-button","more":"View all results","mobile":"false","reset_all":"Really you want to restart all data?","manually_content":"They sure have added content manually?","loading":"Loading..","loadingplayer":"Loading player..","selectaplayer":"Select a video player","playeradstime":null,"autoplayer":"1","livesearchactive":"1"};
+		/* ]]> */
+		</script>
+	   <center><script id="_waum0u">var _wau = _wau || []; _wau.push(["dynamic", "pobrebiz", "m0u", "c4302bffffff", "small"]);</script><script async src="//waust.at/d.js"></script></center></div>
+   <div id="oscuridad"></div>
    </body>
 </html>
