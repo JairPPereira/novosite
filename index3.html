@@ -25,7 +25,81 @@
 	<meta property="og:image:height" content="57" />
 	<meta property="og:image:type" content="image/png" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<script>
+		function search() {
+			var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+			var searchResultsDiv = document.getElementById("searchResults");
 	
+			// Carregue o conteúdo da página "filmes.html" usando AJAX
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/filmes.html", true);
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					var pageContent = xhr.responseText;
+	
+					// Crie um elemento temporário para analisar o HTML
+					var tempElement = document.createElement("div");
+					tempElement.innerHTML = pageContent;
+	
+					// Encontre os elementos correspondentes dentro do conteúdo carregado
+					var articles = tempElement.querySelectorAll(".item.movies");
+					var results = [];
+	
+					articles.forEach(function (article) {
+						var movieTitle = article.querySelector("h3 a").textContent.toLowerCase();
+						if (movieTitle.includes(searchTerm)) {
+							results.push(article.outerHTML);
+						}
+					});
+	
+					// Exiba os resultados na página
+					if (results.length > 0) {
+						searchResultsDiv.innerHTML = results.join("");
+					} else {
+						searchResultsDiv.innerHTML = "Nenhum resultado encontrado.";
+					}
+				}
+			};
+			xhr.send();
+		}
+	
+		function searchMobile() {
+			var searchTerm = document.getElementById("searchInputMobile").value.toLowerCase();
+			var searchResultsDiv = document.getElementById("searchResults");
+	
+			// Carregue o conteúdo da página "filmes.html" usando AJAX
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/filmes.html", true);
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					var pageContent = xhr.responseText;
+	
+					// Crie um elemento temporário para analisar o HTML
+					var tempElement = document.createElement("div");
+					tempElement.innerHTML = pageContent;
+	
+					// Encontre os elementos correspondentes dentro do conteúdo carregado
+					var articles = tempElement.querySelectorAll(".item.movies");
+					var results = [];
+	
+					articles.forEach(function (article) {
+						var movieTitle = article.querySelector("h3 a").textContent.toLowerCase();
+						if (movieTitle.includes(searchTerm)) {
+							results.push(article.outerHTML);
+						}
+					});
+	
+					// Exiba os resultados na página
+					if (results.length > 0) {
+						searchResultsDiv.innerHTML = results.join("");
+					} else {
+						searchResultsDiv.innerHTML = "Nenhum resultado encontrado.";
+					}
+				}
+			};
+			xhr.send();
+		}
+	</script>	
 	<!-- / Yoast SEO plugin. -->
 	<script async src="https://cse.google.com/cse.js?cx=e6402a9b2fa4f49d2">
 	</script>
@@ -132,32 +206,9 @@
 <li id="menu-item-83243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83243"><a href="https://jppfilmes.pages.dev/">Filmes Online</a></li>
 
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83243"><a href="https://jptv.netlify.app/">TV Online</a></li>
+<input type="text" id="searchInput" placeholder="Digite o nome do canal">
+		<button onclick="search()">Buscar</button>
 
-<!-- start of freefind search box html -->
-<table cellpadding=0 cellspacing=0 border=0 >
-	<tr>
-		<td  style="font-family: Arial, Helvetica, sans-serif; font-size: 18pt;">
-			<form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-			<input type="hidden" name="si" value="55377381">
-			<input type="hidden" name="pid" value="r">
-			<input type="hidden" name="n" value="0">
-			<input type="hidden" name="_charset_" value="">
-			<input type="hidden" name="bcd" value="&#247;">
-			<input type="text" name="query" size="15"> 
-			<input type="submit" value="search">
-			</form>
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
-			<a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow">search engine</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow"> by
-			<span style="color: #606060;">freefind</span></a>
-		</td>
-	
-	</tr>
-	</table>
-	<!-- end of freefind search box html -->
-	
 </ul>
 
 </div>
@@ -176,11 +227,17 @@
 	</header>
 	<div class="search_responsive">
 	
-		<div class="live-search"></div>
+		<div class="live-search">
+			<input type="text" id="searchInputMobile" placeholder="Buscar">
+      
+			<button2 onclick="searchMobile()">Buscar</button2> </center>
+
+		</div>
 	</div>
 	<div id="arch-menu" class="menuresp">
 		<div class="menu">
 						<div class="menu-menu-principal-container"><ul id="main_header" class="resp"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-85666"><a href="https://jppfilmes.pages.dev/" aria-current="page">Inicio</a></li>
+
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-54607"><a href="https://jppfilmes.pages.dev/#" aria-current="page">Categorias</a>
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-taxonomy menu-item-object-genres menu-item-54615"><a href="https://jppfilmes.pages.dev/generos/acao/">Ação</a></li>
@@ -218,37 +275,29 @@
 
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83243"><a href="https://jptv.netlify.app/">TV Online</a></li>
 
-<!-- start of freefind search box html -->
-<table cellpadding=0 cellspacing=0 border=0 >
-	<tr>
-		<td  style="font-family: Arial, Helvetica, sans-serif; font-size: 18pt;">
-			<form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-			<input type="hidden" name="si" value="55377381">
-			<input type="hidden" name="pid" value="r">
-			<input type="hidden" name="n" value="0">
-			<input type="hidden" name="_charset_" value="">
-			<input type="hidden" name="bcd" value="&#247;">
-			<input type="text" name="query" size="15"> 
-			<input type="submit" value="search">
-			</form>
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 18pt; padding-top:4px;">
-			<a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow">search engine</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow"> by
-			<span style="color: #606060;">freefind</span></a>
-		</td>
+
 	
-	</tr>
-	</table>
-	<!-- end of freefind search box html -->
 	
-</ul></div>		</div>
+</ul>
+
+
+</div>	
+<div class="search_responsive">
+	
+
+<a id="c_loginbox"><i class="fas fa-times"></i></a>
+
+
+</div>
+
+</div>
 	</div>
 </div>
 <div id="contenedor">
+
 <div class="login_box">
     <div class="box">
+		
         <a id="c_loginbox"><i class="fas fa-times"></i></a>
       
    
@@ -319,12 +368,18 @@ displayRandomMovie();
   
 
 <div class="module">
+	
+		
+
+	
 	<button id="myButton">Surpreenda-me</button>
+
 <div class="content full_width_layout full"><header><h2>DESTAQUES FILMES E SERIES </h2></header>
 	
 <div id="featload" class="load_modules">Loading..</div>
 
 <div class="items featured">
+	<div id="searchResults" class="items featured"></div>
 
 	<article id="post-featured-673271" class="item movies"><div class="poster"><img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3ndpRWh8iOvckVtHptIsD4OtayN.jpg" alt="13: O Musical"><div class="rating">6.2</div><div class="featu">Família</div><a href="https://jp-app.netlify.app/details/673271"><div class="see play4"></div></a></div><div class="data dfeatur"><h3><a href="https://jp-app.netlify.app/details/673271">13: O Musical</a></h3><span>2022</span></div></article>
 
